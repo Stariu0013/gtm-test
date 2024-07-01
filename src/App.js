@@ -10,6 +10,14 @@ function App() {
         });
     };
 
+    const clickAnotherCustomTrigger = () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "test 2",
+            message: "Hello world"
+        });
+    };
+
     return (
         <div className="App">
             <header className="App-header">
@@ -26,6 +34,7 @@ function App() {
                     Learn React
                 </a>
                 <button onClick={clickCustomTrigger} className="custom-trigger">Trigger</button>
+                <button onClick={clickAnotherCustomTrigger} className="custom-trigger">Trigger another event</button>
             </header>
         </div>
     );
